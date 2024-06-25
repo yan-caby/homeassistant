@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: streamlabswater
+Version: 1.0.1
+Summary: Unofficial Python library for the Streamlabs Water API
+Home-page: https://github.com/cpopp/streamlabswater-python
+Author: Christopher Popp
+Author-email: christopherpopp@yahoo.com
+License: Apache 2.0
+Keywords: streamlabs,streamlabswater,iot,water,sensor,smarthome,automation
+Requires-Dist: requests
+

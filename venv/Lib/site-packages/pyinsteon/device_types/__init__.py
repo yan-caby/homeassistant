@@ -1,0 +1,1 @@
+"""Insteon device types."""

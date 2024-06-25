@@ -1,0 +1,2 @@
+[console_scripts]
+insteon_tools = pyinsteon.tools:tools

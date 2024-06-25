@@ -1,0 +1,2 @@
+export const id=91570;export const ids=[91570];export const modules={91570:(t,e,a)=>{a.r(e),a.d(e,{MapDashboardStrategy:()=>o});var r=a(62659),s=a(40924),n=a(18791);let o=(0,r.A)([(0,n.EM)("map-dashboard-strategy")],(function(t,e){return{F:class extends e{constructor(...e){super(...e),t(this)}},d:[{kind:"method",static:!0,key:"generate",value:async function(t,e){return{title:e.localize("panel.map"),views:[{strategy:t}]}}},{kind:"field",static:!0,key:"noEditor",value:()=>!0}]}}),s.mN)}};
+//# sourceMappingURL=91570.TT4aUYnRnfo.js.map

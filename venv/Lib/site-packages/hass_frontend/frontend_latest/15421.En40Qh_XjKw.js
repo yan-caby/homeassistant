@@ -1,0 +1,2 @@
+export const id=15421;export const ids=[15421];export const modules={15421:(t,e,r)=>{r.r(e),r.d(e,{IframeViewStrategy:()=>i});var n=r(62659),s=r(40924),a=r(18791);let i=(0,n.A)([(0,a.EM)("iframe-view-strategy")],(function(t,e){return{F:class extends e{constructor(...e){super(...e),t(this)}},d:[{kind:"method",static:!0,key:"generate",value:async function(t){return{type:"panel",title:t.title,cards:[{type:"iframe",url:t.url}]}}}]}}),s.mN)}};
+//# sourceMappingURL=15421.En40Qh_XjKw.js.map

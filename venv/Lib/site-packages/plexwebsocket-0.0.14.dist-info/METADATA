@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: plexwebsocket
+Version: 0.0.14
+Summary: Support for issuing callbacks in response to Plex websocket updates.
+Home-page: https://github.com/jjlawren/python-plexwebsocket/
+Author: Jason Lawrence
+Author-email: jjlawren@users.noreply.github.com
+License: MIT
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# python-plexwebsocket
+Async library to react to events issued over Plex websockets.
+
+## Example use
+```python
+import asyncio
+import logging
+from plexapi.server import PlexServer
+from plexwebsocket import PlexWebsocket, SIGNAL_CONNECTION_STATE
+
+logging.basicConfig(level=logging.DEBUG)
+
+baseurl = 'http://<PLEX_SERVER_IP>:32400'
+token = '<YOUR_TOKEN_HERE>'
+plex = PlexServer(baseurl, token)
+
+def print_info(msgtype, data, error):
+    if msgtype == SIGNAL_CONNECTION_STATE:
+        print(f"State: {data} / Error: {error}")
+    else:
+        print(f"Data: {data}")
+
+async def main():
+    ws = PlexWebsocket(plex, print_info, subscriptions=["playing", "status"])
+    await ws.listen()
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+```
+
+
